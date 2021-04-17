@@ -34,3 +34,32 @@ def getCategoryData(request):
         except:
            return JsonResponse({"status":500}) 
     return JsonResponse({"status":400})
+
+def getSearchResults(request):
+    if request.method == "GET":
+        try:
+            data = request.GET.dict()
+            keyword = data["keyword"].lower()
+            result = []
+            for key in products.keys():
+                #print(keyword,products[key]["name"])
+                if keyword in products[key]["name"].lower() or keyword in products[key]["category"].lower():
+                    temp = products[key]
+                    temp["key"] = key
+                    result.append(temp)
+            return JsonResponse({"result":result,"status":200})
+        except:
+           return JsonResponse({"status":500}) 
+    return JsonResponse({"status":400})
+
+def getProduct(request):
+    if request.method == "GET":
+        try:
+            data = request.GET.dict()
+            id = data["id"]
+            result = products[id]
+
+            return JsonResponse({"result":result,"status":200})
+        except:
+           return JsonResponse({"status":500}) 
+    return JsonResponse({"status":400})

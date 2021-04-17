@@ -20,5 +20,7 @@ from webfx import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('getAllProducts/',views.getProducts),
-    path('getCategory/',views.getCategoryData)
+    path('getCategory/',views.getCategoryData),
+    path('getSearchResults/',views.getSearchResults),
+    path('getProduct/',views.getProduct),
 ]

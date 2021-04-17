@@ -44,11 +44,11 @@ def getCategory(category):
     getAllData()
   result = []
   for key in products.keys():
-    print(products[key]["category"],category)
+    #print(products[key]["category"],category)
     if products[key]["category"] == category:
       result.append(products[key])
-      print("here")
-  print(result,"u",products)
+      #print("here")
+  #print(result,"u",products)
   return result
 
 
