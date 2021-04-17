@@ -13,7 +13,7 @@ config = {
 
 firebase = Firebase(config)
 db = firebase.database()
-product = {}
+products = {}
 
 
 def getAllData():
@@ -21,8 +21,6 @@ def getAllData():
   products = db.child("Product").get()
   products = dict(products.val())
   return
-
-
 
 def setData():
   with open(fileName, "r") as read_file:
@@ -42,11 +40,15 @@ def getData(id):
 
 def getCategory(category):
   global products
+  if products == {}:
+    getAllData()
   result = []
   for key in products.keys():
+    print(products[key]["category"],category)
     if products[key]["category"] == category:
       result.append(products[key])
-  
+      print("here")
+  print(result,"u",products)
   return result
 
 
@@ -59,8 +61,6 @@ def updateProduct(id,val):
 
 
 getAllData()
-updateProduct("001",13)
-print(getCategory("TV"))
 
 
   #for key in data.key()
