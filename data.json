@@ -1,0 +1,92 @@
+{
+    "001":{
+        "name": "Kodak 80 cm (32 Inches) HD Certified Android LED TV 32HDX7XPRO (Black) (2020 Model)",
+        "price": "13,799.00",
+        "quantity": 25,
+        "category": "TV",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/81nYUryOxUL._SX679_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/711plRQ5x8L._SX522_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/81GY5APthxL._SX355_.jpg"
+    },
+    "002":{
+        "name": "TCL 108 cm (43 inches) Full HD Certified Android Smart LED TV 43S6500FS (Black) (2020 Model)",
+        "price": "25,890.00",
+        "quantity": 15,
+        "category": "TV",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/81kRcfQZe%2BL._SX679_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/612w-lzGffL._SX425_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/71NwRbhTL2L._SX425_.jpg"
+    },
+    "003":{
+        "name": "Sanyo 108 cm (43 inches) Kaizen Series Full HD Certified Android LED TV XT-43FHD4S (Black) (2020 Model)",
+        "price": "22,999.00",
+        "quantity": 10,
+        "category": "TV",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/81CU76hBEyL._SX679_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/51uetM8yMIL._SY450_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/41vWmWpBvNL._SY450_.jpg"
+    },
+    "004":{
+        "name": "Panasonic 100 cm (40 inches) Full HD Android Smart LED TV TH-40HS450DX (Black) (2020 Model)",
+        "price": "24,999.00",
+        "quantity": 7,
+        "category": "TV",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/91auveGcURL._SX679_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/91UqiMRzxmL._SX450_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/911H%2B8HP5xL._SX450_.jpg"
+    },
+    "005":{
+        "name": "OnePlus Y Series 108 cm (43 inches) Full HD LED Smart Android TV 43Y1 (Black) (2020 Model)",
+        "price": "25,499.00",
+        "quantity": 4,
+        "category": "TV",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/812wg%2BpfXAL._SX425_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/71nsFlZ1aKL._SX425_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/7184ROxnceL._SY450_.jpg"
+    },
+    "006":{
+        "name": "LG 360 L 3 Star Inverter Linear Frost-Free Double Door Refrigerator (GL-T402JDS3, Dazzle Steel, Convertible)",
+        "price": "43,190.00",
+        "quantity": 14,
+        "category": "FRIDGE",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/61UTlibhl%2BL._SY741_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/71gJur6x%2BNL._SX569_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/61NsggnzpJL._SY500_.jpg"
+    },
+    "007":{
+        "name": "AmazonBasics 564 L Side-by-Side Door Refrigerator (Silver Steel Finish)",
+        "price": "46,049.00",
+        "quantity": 18,
+        "category": "FRIDGE",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/71DuofqGR8L._SX679_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/81zuIBVpFeL._SX466_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/71VBg3TNu-L._SX466_.jpg"
+    },
+    "008":{
+        "name": "Samsung 700 L Inverter Frost Free Side-by-Side Refrigerator (RS72R5001M9TL, Gentle Silver Matt, SpaceMax Technology)",
+        "price": "71,990.00",
+        "quantity": 8,
+        "category": "FRIDGE",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/61EcvMbH7zL._SY741_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/814ZwyavJpL._SX466_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/51Zn8s95pOL._SX466_.jpg"
+    },
+    "009":{
+        "name": "Hisense 411 L 2 Star Inverter Frost-Free Double Door Refrigerator (RT488N4ASB2, Stainless steel)",
+        "price": "34,990.00",
+        "quantity": 20,
+        "category": "FRIDGE",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/51pwGjclxqL._SX679_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/710avIF7k1L._SX466_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/61BoysTMe8L._SX466_.jpg"
+    },
+    "010":{
+        "name": "Whirlpool 355 L 3 Star Frost Free Double Door Refrigerator (IFPRO INV CNV 370 3S, Omega Steel, Convertible)",
+        "price": "40,164.00",
+        "quantity": 20,
+        "category": "FRIDGE",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/719p0pdbPxL._SY741_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/71wT0gVTRyL._SX466_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/71PtXhIzaOL._SX466_.jpg"
+    }
+}
