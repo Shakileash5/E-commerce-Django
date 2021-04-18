@@ -23,4 +23,6 @@ urlpatterns = [
     path('getCategory/',views.getCategoryData),
     path('getSearchResults/',views.getSearchResults),
     path('getProduct/',views.getProduct),
+    path('addToCart/',views.addProduct),
+    path('getCart/',views.getCartProducts),
 ]
