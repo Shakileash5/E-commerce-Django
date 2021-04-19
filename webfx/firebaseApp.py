@@ -63,13 +63,29 @@ def updateProduct(id,val):
 getAllData()
 
 def getCartData(id):
-  data = db.child("Cart").child(id).child("cart").get()
+  data = db.child("userDetails").child(id).child("cart").get()
   print(data)
   return data.val()
 
 def setCartData(id,data):
-  db.child("Cart").child(str(id)).child("cart").set(data)
+  db.child("userDetails").child(str(id)).child("cart").set(data)
 
+def getOrderData():
+  data = db.child("Orders").child("Requests").get()
+  print(data.val())
+  return data.val()
+
+def getUserOrderData(id):
+  data = db.child("userDetails").child(id).child("orders").get()
+  print(data.val())
+  return data.val()
+
+def setOrderData(data):
+  db.child("Orders").child("Requests").set(data)
+
+def setUserOrderData(id,data):
+  data = db.child("userDetails").child(id).child("orders").set(data)
+  
 #setCartData()
 
   #for key in data.key()

@@ -71,7 +71,7 @@ def addProduct(request):
         try:
             data = request.POST.dict()
             data = json.loads(request.body.decode('utf-8'))
-            print(data,data["userId"])
+            #print(data,data["userId"])
             cartData = getCartData(data["userId"])
             
             #print("cartData",cartData)
@@ -89,7 +89,7 @@ def addProduct(request):
                         cartData.append(data["data"])
                         setCartData(data["userId"],cartData)
             else:
-                print("here",len(data["data"]),data["userId"])
+                #print("here",len(data["data"]),data["userId"])
                 setCartData(data["userId"],data["data"])
             #id = data["id"]
             #result = products[id]
@@ -104,12 +104,85 @@ def getCartProducts(request):
     if request.method == "GET":
         try:
             data = request.GET.dict()
-            print(data)
+            #data = request.body.decode('utf-8')
+            #print(data,"fytguhij")
+            if data != None:
+                #data = json.loads(data)
+                #print(data,data["uid"])
+                cartData = getCartData(data["uid"])
+                uid = data["uid"]
+                
+                result = getCartData(uid)
+
+                return JsonResponse({"result":result,"status":200})
+            return JsonResponse({"result":result,"status":200})
+        except Exception as e:
+           print(e)
+           return JsonResponse({"status":500}) 
+    return JsonResponse({"status":400})
+
+def getUserOrders(request):
+    if request.method == "GET":
+        try:
+            data = request.GET.dict()
+            #print(data,"orderProduct")
             uid = data["uid"]
               
-            result = getCartData(uid)
+            #cartData = getCartData(uid)
+            orderData = getUserOrderData(uid)
+            print(orderData,"cartData")
+            return JsonResponse({"result":orderData,"status":200})
+        except Exception as e:
+           print(e)
+           return JsonResponse({"status":500}) 
+    return JsonResponse({"status":400})
 
-            return JsonResponse({"result":result,"status":200})
+@csrf_exempt
+def orderProduct(request):
+    if request.method == "POST":
+        try:
+            data = request.POST.dict()
+            data = json.loads(request.body.decode('utf-8'))
+            print(data,data["userId"])
+            cartData = getCartData(data["userId"])
+            orderData = getOrderData()
+            userOrderData = getUserOrderData(data["userId"])
+            if type(cartData)==type({}):
+                cartData = [cartData]
+            if type(cartData)==type([]):
+                for cartItem in cartData:
+                    cartItem["status"] = 0
+            #print("cartData",cartData)
+            if type(cartData)==type([]):
+                if userOrderData == None:
+                    setUserOrderData(data["userId"],cartData)
+                    setCartData(data["userId"],None)
+                    if orderData == None:
+                        setOrderData(cartData)
+                    else:
+                        for cartItem in cartData:
+                            orderData.insert(0,cartItem)
+                        setOrderData(orderData)
+                else:
+                    
+                    for cartItem in cartData:
+                        userOrderData.insert(0,cartItem)
+                    setUserOrderData(data["userId"],userOrderData)
+                    setCartData(data["userId"],None)
+
+                    if orderData == None:
+                        setOrderData(cartData)
+                    else:
+                        for cartItem in cartData:
+                            orderData.insert(0,cartItem)
+                        setOrderData(orderData)
+            else:
+                print("here",len(data["data"]),data["userId"])
+                #setCartData(data["userId"],data["data"])
+            #id = data["id"]
+            #result = products[id]
+
+            return JsonResponse({"result":orderData,"status":200})
         except Exception as e:
            print(e)
            return JsonResponse({"status":500}) 
