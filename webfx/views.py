@@ -192,6 +192,7 @@ def orderProduct(request):
                 if userOrderData == None:
                     setUserOrderData(data["userId"],cartData)
                     setCartData(data["userId"],None)
+                    userOrderData = cartData
                     if orderData == None:
                         setOrderData(cartData)
                     else:
