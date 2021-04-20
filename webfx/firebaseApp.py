@@ -80,12 +80,26 @@ def getUserOrderData(id):
   print(data.val())
   return data.val()
 
+def getOrderId():
+  data = db.child("orderId").get().val()
+  return data
+
+def setOrderId(val):
+  db.child("orderId").set(val)
+
+def getOrders():
+  data = db.child("Orders").child("Requests").get()
+  return data.val()
+
 def setOrderData(data):
   db.child("Orders").child("Requests").set(data)
 
 def setUserOrderData(id,data):
   data = db.child("userDetails").child(id).child("orders").set(data)
   
+def setUserDetails(id,data):
+  db.child("userDetails").child(id).set(data)
+
 #setCartData()
 
   #for key in data.key()

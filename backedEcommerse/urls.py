@@ -26,5 +26,7 @@ urlpatterns = [
     path('addToCart/',views.addProduct),
     path('getCart/',views.getCartProducts),
     path('getUserOrders/',views.getUserOrders),
-    path('orderProducts/',views.orderProduct)
+    path('orderProducts/',views.orderProduct),
+    path('addDetails/',views.setDetails),
+    path('getAllOrders/',views.getAllOrders)
 ]

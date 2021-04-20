@@ -11,8 +11,26 @@ import math
 from collections import Counter,OrderedDict
 from django.http import JsonResponse
 from .firebaseApp import *
+from datetime import date
 # Create your views here.
 
+@csrf_exempt
+def setDetails(request):
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body.decode('utf-8'))
+            id = data["userId"]
+            dataDict = {
+                "email":data["email"],
+                "phoneNo":data["phoneNo"],
+                "orders": [],
+                "cart": [],
+            }
+            result = setUserDetails(id,dataDict)
+            return JsonResponse({"result":"Successfull","status":200})
+        except:
+           return JsonResponse({"status":500}) 
+    return JsonResponse({"status":400})
 
 def getProducts(request):
     if request.method == "GET":
@@ -147,11 +165,17 @@ def orderProduct(request):
             cartData = getCartData(data["userId"])
             orderData = getOrderData()
             userOrderData = getUserOrderData(data["userId"])
+            lastOrderId = int(getOrderId())
             if type(cartData)==type({}):
                 cartData = [cartData]
             if type(cartData)==type([]):
                 for cartItem in cartData:
+                    cartItem["orderDate"] = str(date.today())
+                    cartItem["orderId"] = lastOrderId+1
                     cartItem["status"] = 0
+                    cartItem["userId"] = data["userId"]
+                    
+                    lastOrderId+=1
             #print("cartData",cartData)
             if type(cartData)==type([]):
                 if userOrderData == None:
@@ -181,7 +205,22 @@ def orderProduct(request):
                 #setCartData(data["userId"],data["data"])
             #id = data["id"]
             #result = products[id]
+            setOrderId(lastOrderId)
+            return JsonResponse({"result":userOrderData,"status":200})
+        except Exception as e:
+           print(e)
+           return JsonResponse({"status":500}) 
+    return JsonResponse({"status":400})
 
+def getAllOrders(request):
+    if request.method == "GET":
+        try:
+            data = request.GET.dict()
+            #print(data,"orderProduct")
+              
+            #cartData = getCartData(uid)
+            orderData = getOrders()
+            print(orderData,"orderData")
             return JsonResponse({"result":orderData,"status":200})
         except Exception as e:
            print(e)
