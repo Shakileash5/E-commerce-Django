@@ -28,5 +28,7 @@ urlpatterns = [
     path('getUserOrders/',views.getUserOrders),
     path('orderProducts/',views.orderProduct),
     path('addDetails/',views.setDetails),
-    path('getAllOrders/',views.getAllOrders)
+    path('getAllOrders/',views.getAllOrders),
+    path("isAdmin/",views.checkAdmin),
+    path("acceptOrder/",views.acceptOrder)
 ]

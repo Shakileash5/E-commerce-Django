@@ -88,5 +88,140 @@
         "img_1": "https://images-na.ssl-images-amazon.com/images/I/719p0pdbPxL._SY741_.jpg",
         "img_2": "https://images-na.ssl-images-amazon.com/images/I/71wT0gVTRyL._SX466_.jpg",
         "img_3": "https://images-na.ssl-images-amazon.com/images/I/71PtXhIzaOL._SX466_.jpg"
+    },
+    "011":{
+        "name": "Adamo Analog Gold Dial Men's Watch-A829BR04",
+        "price": "499.00",
+        "quantity": 20,
+        "category": "WATCH",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/81gkMz5PUIL._AC_UL1500_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/71Sd8RHbBfL._AC_UL1500_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/81sfsEoYLTL._AC_UL1500_.jpg"
+    },
+    "012":{
+        "name": "Fastrack Space Analog Blue Dial Men's Watch 3184SM04/NN3184SM04",
+        "price": "2150.00",
+        "quantity": 20,
+        "category": "WATCH",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/71zjdbpoFDL._AC_UL1500_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/718D3-PxsRL._AC_UL1500_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/71rq3NKRfHL._AC_UL1500_.jpg"
+    },
+    "013":{
+        "name": "SKMEI Digital Dial Men's Watch-1257 Black",
+        "price": "600.00",
+        "quantity": 20,
+        "category": "WATCH",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/41TbYli3goL._AC_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/41jXDwCKQLL._AC_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/51krBJpFhpL._AC_.jpg"
+    },
+    "014":{
+        "name": "WRIGHTRACK Analogue Men's Watch (White Dial Brown Colored Strap)",
+        "price": "469.00",
+        "quantity": 40,
+        "category": "WATCH",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/71lXvsQGOWL._AC_UL1500_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/61%2BDVsTYspL._AC_UL1500_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/71z0mb-y6kL._AC_UL1500_.jpg"
+    },
+    "015":{
+        "name": "Men's Watch (Black Colored Strap)",
+        "price": "599.00",
+        "quantity": 30,
+        "category": "WATCH",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/717whn2eV-L._AC_UL1500_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/718oZTGdmaL._AC_UL1500_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/71bNOxjsg2L._AC_UL1500_.jpg"
+    },
+    "016":{
+        "name": "Sanyo 1 Ton 3 Star Inverter Split AC (Copper, PM 2.5 Filter, 2020 Model, SI/SO-10T3SCIC White)",
+        "price": "29,000.00",
+        "quantity": 90,
+        "category": "AC",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/71-Npb1K80L._AC_SL1500_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/81ig7iDaqEL._AC_SL1500_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/71XfqqnezXL._AC_SL1500_.jpg"
+    },
+	"017":{
+        "name": "Whirlpool 1.5 Ton 3 Star Inverter Split Ac Copper, 1.5T Magicool Pro/Pro+ 3S Copr Inverter, White",
+        "price": "37000.00",
+        "quantity": 30,
+        "category": "AC",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/61Vs-rdtqvL._AC_SL1500_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/71vpQkBsLhL._AC_SL1500_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/71QGsva0RRL._AC_SL1500_.jpg"
+    },    
+    "018":{
+        "name": "Daikin 0.8 Ton 3 Star Split AC (Copper, PM 2.5 Filter, 2019 Model, FTL28TV, White)",
+        "price": "28000.00",
+        "quantity": 25,
+		"category": "AC",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/51N4-Xk35kL._AC_SL1500_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/819wFACQWjL._AC_SL1500_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/712tPuF1rcL._AC_SL1500_.jpg"
+    },    
+    "019":{
+        "name": "AmazonBasics 1.5 Ton 3 Star 2021 Inverter Split AC, White",
+        "price": "28000.00",
+        "quantity": 10,
+        "category": "AC",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/61i5I8Ym97L._AC_SL1500_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/61voEyq1s%2BL._AC_SL1500_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/61PV8hPMPuL._AC_SL1500_.jpg"
+    },    
+    "020":{
+        "name": "Voltas 1.5 Ton 3 Star Inverter Split AC (Copper 183VCZS White)",
+        "price": "27000.00",
+        "quantity": 40,
+        "category": "AC",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/51f0BkrwQPL._AC_SL1500_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/81hB-zifJ0L._AC_SL1500_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/7128gSe3PmL._AC_SL1500_.jpg"
+    },    
+	"021":{
+        "name": "Pigeon Lavio 2 Litre Table Top Wet Grinder Machine with 2 Stones and Coconut Scrapper and Atta Kneader - 150 Watt Heavy Duty Motor Ideal for Your Kitchen",
+        "price": "4260.00",
+        "quantity": 20,
+        "category": "GRINDER",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/51mGq5Br%2BHL._AC_SL1000_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/51HErMLo83L._AC_SL1000_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/614Ixz99P5L._AC_SL1000_.jpg"
+    },
+    "022":{
+        "name": "Butterfly Smart Wet Grinder, 2L (White) with Coconut Scrapper Attachment, 150 W",
+        "price": "4900.00",
+        "quantity": 20,
+        "category": "GRINDER",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/613rhyyc3YL._AC_SL1500_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/616KBHW77%2BL._AC_SL1500_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/71mpNh1p%2BkL._AC_SL1500_.jpg"
+    },	
+    "023":{
+        "name": "Butterfly Rhino Plus Wet Grinder, 2L (Grey) , 150W",
+        "price": "4890.00",
+        "quantity": 20,
+        "category": "GRINDER",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/71WaBDJdTIL._AC_SL1500_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/71j6vA957CL._AC_SL1500_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/61q749u82gL._AC_SL1500_.jpg"
+    },	
+    "024":{
+        "name": "Prestige Iris 750 Watt Mixer Grinder with 3 Stainless Steel Jar + 1 Juicer Jar (White and Blue)",
+        "price": "4780.00",
+        "quantity": 20,
+        "category": "GRINDER",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/81%2BM1QrVNIL._AC_SL1500_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/61wCd8E9VaL._AC_SL1000_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/61jR2-gjVZL._AC_SL1000_.jpg"
+    },	
+    "025":{
+        "name": "Bajaj GX-1 Mixer Grinder, 500W, 3 Jars",
+        "price": "1999.00",
+        "quantity": 20,
+        "category": "GRINDER",
+        "img_1": "https://images-na.ssl-images-amazon.com/images/I/714W80Jwi0L._AC_SL1500_.jpg",
+        "img_2": "https://images-na.ssl-images-amazon.com/images/I/71rXP1xgZqL._AC_SL1500_.jpg",
+        "img_3": "https://images-na.ssl-images-amazon.com/images/I/81GNnrQzR0L._AC_SL1500_.jpg"
     }
 }

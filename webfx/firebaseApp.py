@@ -53,10 +53,8 @@ def getCategory(category):
 
 
 def updateProduct(id,val):
-  
   db.child("Product").child(id).update({"quantity": val})
   getAllData()
-  
   return
 
 
@@ -99,6 +97,23 @@ def setUserOrderData(id,data):
   
 def setUserDetails(id,data):
   db.child("userDetails").child(id).set(data)
+
+def isAdmin(id):
+  data = db.child("userDetails").child(id).get()
+  data = data.val()
+  keys = data.keys()
+  if "admin" in keys:
+    if data["admin"] == "True":
+      return True
+  
+  return False
+
+def getTodoData():
+  data = db.child("Orders").child("Accepted").get()
+  return data.val()
+
+def setTodoData(data):
+  db.child("Orders").child("Accepted").set(data)
 
 #setCartData()
 

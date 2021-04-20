@@ -71,6 +71,17 @@ def getSearchResults(request):
            return JsonResponse({"status":500}) 
     return JsonResponse({"status":400})
 
+def checkAdmin(request):
+    if request.method == "GET":
+        try:
+            data = request.GET.dict()
+            id = data["id"]
+            result = isAdmin(id)
+            return JsonResponse({"result":result,"status":200})
+        except:
+           return JsonResponse({"status":500}) 
+    return JsonResponse({"status":400})
+
 def getProduct(request):
     if request.method == "GET":
         try:
@@ -207,6 +218,54 @@ def orderProduct(request):
             #result = products[id]
             setOrderId(lastOrderId)
             return JsonResponse({"result":userOrderData,"status":200})
+        except Exception as e:
+           print(e)
+           return JsonResponse({"status":500}) 
+    return JsonResponse({"status":400})
+
+@csrf_exempt
+def acceptOrder(request):
+    if request.method == "POST":
+        try:
+            data = request.POST.dict()
+            data = json.loads(request.body.decode('utf-8'))
+            #print(data,data["userId"])
+
+            #cartData = getCartData(data["userId"])
+            acceptedData = getTodoData()
+            #lastOrderId = int(getOrderId())
+            userData = getUserOrderData(data["acceptData"]["userId"])
+            orders = getOrderData()
+            if type(data["acceptData"])==type({}):
+                data["acceptData"]["status"] = 1
+            print("cartData",userData)
+            if type(userData)==type([]):
+                if userData!=None:
+                    for i in range(len(userData)):
+                        if userData[i]["orderId"] == data["acceptData"]["orderId"]:
+                            userData[i]["status"] = 1
+                            break
+            setUserOrderData(data["acceptData"]["userId"],userData)
+            print("changed user data",userData)
+            #print(orders)
+            if type(orders)==type([]):
+                if orders!=None:
+                    for i in range(len(orders)):
+                        if orders[i]["orderId"] == data["acceptData"]["orderId"]:
+                            del orders[i]
+                            break
+                
+                setOrderData(orders)
+            #if type(acceptedData)==type([]):
+            print("updated order data")
+            if acceptedData == None:
+                acceptedData = [data["acceptData"]]
+            else:
+                acceptedData.append(data["acceptData"])
+            
+            setTodoData(acceptedData)
+            print("added acceept data")
+            return JsonResponse({"result":[acceptedData,orders],"status":200})
         except Exception as e:
            print(e)
            return JsonResponse({"status":500}) 
