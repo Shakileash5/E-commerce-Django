@@ -115,6 +115,12 @@ def getTodoData():
 def setTodoData(data):
   db.child("Orders").child("Accepted").set(data)
 
+def getUserDetails(id):
+  email = db.child("userDetails").child(id).get("email").val()
+  phoneNo = db.child("userDetails").child(id).get("phoneNo").val()
+  
+  return {"email":email,"phoneNo":phoneNo}
+
 #setCartData()
 
   #for key in data.key()

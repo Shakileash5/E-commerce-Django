@@ -176,6 +176,7 @@ def orderProduct(request):
             cartData = getCartData(data["userId"])
             orderData = getOrderData()
             userOrderData = getUserOrderData(data["userId"])
+            userDetails = getUserDetails(data["userId"])
             lastOrderId = int(getOrderId())
             if type(cartData)==type({}):
                 cartData = [cartData]
@@ -185,7 +186,8 @@ def orderProduct(request):
                     cartItem["orderId"] = lastOrderId+1
                     cartItem["status"] = 0
                     cartItem["userId"] = data["userId"]
-                    
+                    cartItem["email"] = userDetails["email"]
+                    cartItem["phoneNo"] = userDetails["phoneNo"]
                     lastOrderId+=1
             #print("cartData",cartData)
             if type(cartData)==type([]):
@@ -324,6 +326,20 @@ def getAllOrders(request):
             orderData = getOrders()
             print(orderData,"orderData")
             return JsonResponse({"result":orderData,"status":200})
+        except Exception as e:
+           print(e)
+           return JsonResponse({"status":500}) 
+    return JsonResponse({"status":400})
+
+def getAcceptedData(request):
+    if request.method == "GET":
+        try:
+            #data = request.GET.dict()
+            #print(data,"orderProduct")
+              
+            #cartData = getCartData(uid)
+            acceptedOrder = getTodoData()
+            return JsonResponse({"result":acceptedOrder,"status":200})
         except Exception as e:
            print(e)
            return JsonResponse({"status":500}) 
