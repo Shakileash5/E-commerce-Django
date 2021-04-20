@@ -272,6 +272,48 @@ def acceptOrder(request):
            return JsonResponse({"status":500}) 
     return JsonResponse({"status":400})
 
+@csrf_exempt
+def rejectOrder(request):
+    if request.method == "POST":
+        try:
+            data = request.POST.dict()
+            data = json.loads(request.body.decode('utf-8'))
+            #print(data,data["userId"])
+
+            #cartData = getCartData(data["userId"])
+            #acceptedData = getTodoData()
+            #lastOrderId = int(getOrderId())
+            userData = getUserOrderData(data["rejectData"]["userId"])
+            orders = getOrderData()
+            if type(data["rejectData"])==type({}):
+                data["rejectData"]["status"] = 1
+            print("cartData",userData)
+            if type(userData)==type([]):
+                if userData!=None:
+                    for i in range(len(userData)):
+                        if userData[i]["orderId"] == data["rejectData"]["orderId"]:
+                            userData[i]["status"] = 2
+                            break
+            setUserOrderData(data["rejectData"]["userId"],userData)
+            print("changed user data",userData)
+            #print(orders)
+            if type(orders)==type([]):
+                if orders!=None:
+                    for i in range(len(orders)):
+                        if orders[i]["orderId"] == data["rejectData"]["orderId"]:
+                            del orders[i]
+                            break
+                
+                setOrderData(orders)
+            #if type(acceptedData)==type([]):
+            print("updated order data")
+            print("added acceept data")
+            return JsonResponse({"result":orders,"status":200})
+        except Exception as e:
+           print(e)
+           return JsonResponse({"status":500}) 
+    return JsonResponse({"status":400})
+
 def getAllOrders(request):
     if request.method == "GET":
         try:

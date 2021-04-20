@@ -30,5 +30,6 @@ urlpatterns = [
     path('addDetails/',views.setDetails),
     path('getAllOrders/',views.getAllOrders),
     path("isAdmin/",views.checkAdmin),
-    path("acceptOrder/",views.acceptOrder)
+    path("acceptOrder/",views.acceptOrder),
+    path("rejectOrder/",views.rejectOrder)
 ]
