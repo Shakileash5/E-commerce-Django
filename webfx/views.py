@@ -88,7 +88,6 @@ def getProduct(request):
             data = request.GET.dict()
             id = data["id"]
             result = products[id]
-
             return JsonResponse({"result":result,"status":200})
         except:
            return JsonResponse({"status":500}) 
@@ -159,7 +158,7 @@ def getUserOrders(request):
               
             #cartData = getCartData(uid)
             orderData = getUserOrderData(uid)
-            print(orderData,"cartData")
+            #print(orderData,"cartData")
             return JsonResponse({"result":orderData,"status":200})
         except Exception as e:
            print(e)
@@ -172,11 +171,13 @@ def orderProduct(request):
         try:
             data = request.POST.dict()
             data = json.loads(request.body.decode('utf-8'))
-            print("\n\n\n",data,data["userId"])
-            cartData = getCartData(data["userId"])
+            #print("\n\n\n",data,data["userId"])
+            cartData = []
             orderData = getOrderData()
-            userOrderData = getUserOrderData(data["userId"])
+            userOrderData = []
             userDetails = getUserDetails(data["userId"])
+            cartData = userDetails["cart"]
+            userOrderData = userDetails["orders"]
             lastOrderId = int(getOrderId())
             if type(cartData)==type({}):
                 cartData = [cartData]
@@ -241,7 +242,7 @@ def acceptOrder(request):
             orders = getOrderData()
             if type(data["acceptData"])==type({}):
                 data["acceptData"]["status"] = 1
-            print("cartData",userData)
+            #print("cartData",userData)
             if type(userData)==type([]):
                 if userData!=None:
                     for i in range(len(userData)):
@@ -249,7 +250,7 @@ def acceptOrder(request):
                             userData[i]["status"] = 1
                             break
             setUserOrderData(data["acceptData"]["userId"],userData)
-            print("changed user data",userData)
+            #print("changed user data",userData)
             #print(orders)
             if type(orders)==type([]):
                 if orders!=None:
@@ -260,14 +261,14 @@ def acceptOrder(request):
                 
                 setOrderData(orders)
             #if type(acceptedData)==type([]):
-            print("updated order data")
+            #print("updated order data")
             if acceptedData == None:
                 acceptedData = [data["acceptData"]]
             else:
                 acceptedData.append(data["acceptData"])
             
             setTodoData(acceptedData)
-            print("added acceept data")
+            #print("added acceept data")
             return JsonResponse({"result":[acceptedData,orders],"status":200})
         except Exception as e:
            print(e)
@@ -289,7 +290,7 @@ def rejectOrder(request):
             orders = getOrderData()
             if type(data["rejectData"])==type({}):
                 data["rejectData"]["status"] = 1
-            print("cartData",userData)
+            #print("cartData",userData)
             if type(userData)==type([]):
                 if userData!=None:
                     for i in range(len(userData)):
@@ -297,7 +298,7 @@ def rejectOrder(request):
                             userData[i]["status"] = 2
                             break
             setUserOrderData(data["rejectData"]["userId"],userData)
-            print("changed user data",userData)
+            #print("changed user data",userData)
             #print(orders)
             if type(orders)==type([]):
                 if orders!=None:
@@ -308,8 +309,8 @@ def rejectOrder(request):
                 
                 setOrderData(orders)
             #if type(acceptedData)==type([]):
-            print("updated order data")
-            print("added acceept data")
+            #print("updated order data")
+            #print("added acceept data")
             return JsonResponse({"result":orders,"status":200})
         except Exception as e:
            print(e)
@@ -324,7 +325,7 @@ def getAllOrders(request):
               
             #cartData = getCartData(uid)
             orderData = getOrders()
-            print(orderData,"orderData")
+            #print(orderData,"orderData")
             return JsonResponse({"result":orderData,"status":200})
         except Exception as e:
            print(e)

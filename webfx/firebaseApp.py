@@ -115,14 +115,36 @@ def getTodoData():
 def setTodoData(data):
   db.child("Orders").child("Accepted").set(data)
 
-def getUserDetails(id):
-  email = db.child("userDetails").child(id).child("email").get().val()
-  phoneNo = db.child("userDetails").child(id).child("phoneNo").get().val()
-  #print(email,phoneNo)
-  return {"email":email,"phoneNo":phoneNo}
 
+def getUserDetails(id):
+  data = db.child("userDetails").child(id).get().val()
+  email = ""
+  phoneNo = ""
+  cartData = []
+  orderData = []
+  keys = data.keys()
+  if "cart" in keys:
+    cartData = data["cart"]
+  
+  if "orders" in keys:
+    orderData = data["orders"]
+  
+  if "email" in keys:
+    email = data["email"]
+  
+  if "phoneNo" in keys:
+    phoneNo = data["phoneNo"]
+  
+  res = {
+    "email":email,
+    "phoneNo":phoneNo,
+    "cart":cartData,
+    "orders":orderData
+  }
+  #print(res)
+  return res
 #setCartData()
-getUserDetails("5lQKBiZroJaR1UDDs5EsnrUZ0V52")
+#getUserDetails("5lQKBiZroJaR1UDDs5EsnrUZ0V52")
   #for key in data.key()
 #Update
 #db.child("users").child("Joe").update({"name": "Joe W Tilsed"})
