@@ -172,7 +172,7 @@ def orderProduct(request):
         try:
             data = request.POST.dict()
             data = json.loads(request.body.decode('utf-8'))
-            print(data,data["userId"])
+            print("\n\n\n",data,data["userId"])
             cartData = getCartData(data["userId"])
             orderData = getOrderData()
             userOrderData = getUserOrderData(data["userId"])
@@ -222,7 +222,7 @@ def orderProduct(request):
             setOrderId(lastOrderId)
             return JsonResponse({"result":userOrderData,"status":200})
         except Exception as e:
-           print(e)
+           print(e,"error")
            return JsonResponse({"status":500}) 
     return JsonResponse({"status":400})
 
