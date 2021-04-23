@@ -18,8 +18,8 @@ What makes our app standout!
 * Admin 👑
 
 # TechStack 👨‍💻
-* FrontEnd : React ⚛
-* BackEnd  : Django (Repo link - [E-commerce-Django](https://github.com/Shakileash5/E-commerce-Django)) 🔮
+* FrontEnd : React (Repo link - [E-commerce-react](https://github.com/Shakileash5/E-Commerce-react)) ⚛
+* BackEnd  : Django 🔮
 * Database : Firebase 🔥 
 
 # Prerequisites
