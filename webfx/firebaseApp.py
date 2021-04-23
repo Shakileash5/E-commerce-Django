@@ -62,7 +62,7 @@ getAllData()
 
 def getCartData(id):
   data = db.child("userDetails").child(id).child("cart").get()
-  print(data)
+  #print(data)
   return data.val()
 
 def setCartData(id,data):
@@ -70,12 +70,12 @@ def setCartData(id,data):
 
 def getOrderData():
   data = db.child("Orders").child("Requests").get()
-  print(data.val())
+  #print(data.val())
   return data.val()
 
 def getUserOrderData(id):
   data = db.child("userDetails").child(id).child("orders").get()
-  print(data.val())
+  #print(data.val())
   return data.val()
 
 def getOrderId():
