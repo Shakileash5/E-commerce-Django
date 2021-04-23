@@ -1,6 +1,6 @@
 
 ![Build Status](https://img.shields.io/badge/build-completed-brightgreen?style=for-the-badge&logo=appveyor)
-![Made With](https://img.shields.io/badge/Made%20With-React-lightblue?style=for-the-badge&logo=appveyor)
+![Made With](https://img.shields.io/badge/Made%20With-Django-red?style=for-the-badge&logo=appveyor)
 
 # WEB-FX 🌐
 An E-Commerce application for small scale industries.

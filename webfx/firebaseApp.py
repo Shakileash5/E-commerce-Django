@@ -4,7 +4,7 @@ import json
 #https://pypi.org/project/firebase/
 fileName = "data.json"
 config = {
-  "apiKey": "AIzaSyCOQJSl3zPjB2v1KIRh_eubuyKd461mnuU",
+  "apiKey": "your - kye",
   "authDomain": "web-fx-da8ba.firebaseio.com/",
   "databaseURL": "https://web-fx-da8ba-default-rtdb.firebaseio.com/",
   "projectId": "web-fx-da8ba",
